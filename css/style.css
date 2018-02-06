@@ -1,0 +1,290 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+nav{
+  width:100%;
+  background: #202c45;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 3px solid #f2184f;
+}
+
+nav h1{
+  margin: 0;
+  padding: 15px 20px;
+  float: left;
+}
+nav h1 a{
+  color:#fff;
+  text-decoration: none;
+}
+nav ul{
+  float:right;
+  margin: 0;
+  padding:0;
+  list-style-type: none;
+}
+
+nav ul li{
+  padding:20px 30px;
+  display: inline-block;
+  transition: .5s;
+}
+nav ul li:hover{
+  background: #f2184f;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.responsive-bar{
+  width: 100%;
+  background: #202c45;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  display: none;
+  border-bottom: 3px solid #f2184f;
+}
+
+.responsive-bar h3{
+  float: left;
+  padding: 3px 0;
+  color: #fff;
+  margin:0;
+}
+
+.responsive-bar h3 a{
+  color:#fff;
+  text-decoration: none;
+}
+.responsive-bar h4{
+  float: right;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  padding: 5px 10px;
+  background: #f2184f;
+  cursor: pointer;
+}
+
+/*Home Page*/
+#showcase{
+  text-align: center;
+  height:40vh;
+  background: url('../img/home-construction.jpg') no-repeat;
+  background-size: cover;
+  width: 100vw;
+  padding-top:50px;
+
+
+}
+
+.btn-light{
+  background: #202c45;
+  border: none;
+  padding:10px 20px;
+  margin-top:10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#wedo h3{
+  text-align: center;
+}
+#wedo .about{
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: repeat(3,1fr);
+}
+
+#wedo .desc{
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+
+/*Styling About Us page*/
+.our-story{
+  margin-right: 10%;
+  margin-left: 10%;
+  background: #ddd;
+  padding:10px;
+  margin-top: 20px;
+}
+#about-us  h3{
+  text-align: center;
+  display: block;
+}
+#about-us .about{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:10px;
+}
+
+#about-us .desc{
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+
+/*Styling Contact Us Page*/
+#contact-bg{
+  background: url('../img/one-cons-1.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:50vh;
+}
+#contact-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top:10rem;
+}
+
+#contact-section .contact-form{
+  text-align:center;
+  background: #ddd;
+  padding-top:10px;
+  padding-bottom: 10px;
+  margin-left: 8%;
+}
+#contact-section .contact-form input[type=text],#contact-section .contact-form input[type=email]{
+  width:400px;
+  height:30px;
+  margin-bottom:20px;
+}
+#contact-section textarea{
+  font-family: sans-serif;
+  margin-bottom:30px;
+  width: 400px;
+}
+
+#contact-section .contact-info{
+  text-align: center;
+}
+#contact-section .contact{
+  margin-bottom:30px;
+}
+
+.contact .contact-desc{
+  font-size: 17px;
+  font-weight: bold;
+}
+.btn{
+  padding:10px 20px;
+  border:none;
+  background: #202c45;
+  color: #fff;
+}
+
+
+/* Footer Section*/
+footer{
+  background: #202c45;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding-top:30px;
+  margin-top: 20px;
+}
+
+footer .social-links{
+  display: flex;
+  justify-content: space-around;
+}
+footer a{
+  color: #fff;
+}
+
+/**/
+@media(max-width:900px){
+
+
+  /*Navbar on small devices*/
+  nav{
+    display:none;
+  }
+  .responsive-bar{
+    display: block;
+  }
+  nav h1{
+    display: block;
+    float: none;
+  }
+  nav ul{
+    float: none;
+    width: 100%;
+  }
+
+  nav ul li{
+    display: block;
+    text-align: center;
+    background: #141e33;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+  }
+  h1.brand{
+    display: none;
+  }
+
+
+  /*Home page on small devices*/
+  #wedo .about{
+    display: block;
+  }
+  #showcase i{
+    color: white;
+  }
+  #wedo .desc{
+    margin-bottom: 10px;
+    margin-left: 2vw;
+    margin-right:2vw;
+  }
+
+
+/*About Us on small devices*/
+  #about-us .about{
+    display: block;
+  }
+  #about-us .desc{
+    margin-bottom: 10px;
+    margin-left: 2vw;
+    margin-right:2vw;
+  }
+  .our-story{
+    margin-left:5%;
+    margin-right: 5%;
+  }
+
+
+  /*Styling Contact Page on small devices*/
+  #contact-section{
+    display:block;
+    text-align: center;
+   }
+  #contact-section input[type=text],#contact-section input[type=email],#contact-section textarea{
+    width:100%;
+  }
+  #contact-section .contact-form{
+    margin-bottom: 20px;
+    margin-left:5%;
+    margin-right: 5%;
+    overflow-x: hidden;
+    border:1px solid black;
+  }
+  #contact-section .contact{
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  /*Footer*/
+  footer{
+    display: block;
+    text-align: center;
+  }
+}
